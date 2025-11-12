@@ -1,5 +1,5 @@
 mountpoints:
   /:
-    url: "https://author-p130360-e1585120.adobeaemcloud.com/bin/franklin.delivery/helms-charity/mrvcopy/main"
+    url: "https://author-weretail-global-dev.adobecqms.net/bin/franklin.delivery/helms-charity/mrvcopy65/main"
     type: "markup"
     suffix: ".html"
