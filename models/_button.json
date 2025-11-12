@@ -1,0 +1,59 @@
+{
+  "definitions": [
+    {
+      "title": "Button",
+      "id": "button",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/button/v1/button",
+            "template": {
+              "model": "button"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "button",
+      "fields": [
+        {
+          "component": "aem-content",
+          "name": "link",
+          "label": "Link"
+        },
+        {
+          "component": "text",
+          "name": "linkText",
+          "label": "Text"
+        },
+        {
+          "component": "text",
+          "name": "linkTitle",
+          "label": "Title"
+        },
+        {
+          "component": "select",
+          "name": "linkType",
+          "label": "Estilo",
+          "options": [
+            {
+              "name": "Default (somente texto)",
+              "value": ""
+            },
+            {
+              "name": "Primary (verde escuro)",
+              "value": "primary"
+            },
+            {
+              "name": "Secondary (verde claro)",
+              "value": "secondary"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

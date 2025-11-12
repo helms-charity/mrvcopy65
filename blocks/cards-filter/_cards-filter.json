@@ -1,0 +1,34 @@
+{
+    "definitions": [
+      {
+        "title": "Cards Filter",
+        "id": "cards-filter",
+        "plugins": {
+          "xwalk": {
+            "page": {
+              "resourceType": "core/franklin/components/block/v1/block",
+              "template": {
+                "name": "Cards Filter",
+                "model": "cards-filter"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "models": [
+      {
+        "id": "cards-filter",
+        "fields": [
+          {
+            "component": "richtext",
+            "name": "text",
+            "label": "Text",
+            "description": "Os Cards são preenchidos automaticamente com base no URL da página"
+          }
+        ]
+      }
+    ],
+    "filters": []
+  }
+  

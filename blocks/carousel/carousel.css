@@ -1,0 +1,1077 @@
+/* Swiper CSS is loaded from local node_modules in head.html */
+
+/* Zoomed image styling - use cover for better zoom visibility */
+.carousel-lightbox-swiper .swiper-slide-zoomed picture img {
+  object-fit: cover !important;
+  transition: none !important;
+}
+
+/* Ensure zoom container is properly set up */
+.carousel-lightbox-swiper .swiper-zoom-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  transition: none;
+}
+
+/* Zoomed slide styling */
+.carousel-lightbox-swiper .swiper-slide-zoomed {
+  overflow: hidden;
+}
+
+/* Ensure zoom module can work properly */
+.carousel-lightbox-swiper .swiper-slide picture {
+  overflow: hidden;
+  position: relative;
+}
+
+/* Essential carousel container styling */
+.carousel .carousel-slides-container {
+  position: relative;
+  padding: 16px 0;
+}
+
+/* Essential Swiper container styling */
+.carousel .swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Essential slide styling - Swiper needs this to display slides */
+.carousel .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 570px;
+  max-height: 570px;
+}
+
+/* Essential image styling */
+.carousel .swiper-slide .carousel-slide-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .swiper-slide .carousel-slide-image picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .swiper-slide .carousel-slide-image picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Essential navigation button styling */
+.carousel .swiper-button-prev,
+.carousel .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  background: rgb(0 0 0 / 50%);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+}
+
+.carousel .swiper-button-prev {
+  left: 24px;
+}
+
+.carousel .swiper-button-next {
+  right: 24px;
+}
+
+.carousel .swiper-button-prev:hover,
+.carousel .swiper-button-prev:focus-visible,
+.carousel .swiper-button-next:hover,
+.carousel .swiper-button-next:focus-visible {
+  background-color: rgb(19 19 19 / 75%);
+}
+
+.carousel .swiper-button-prev::after,
+.carousel .swiper-button-next::after {
+  display: block;
+  content: '';
+  border: 2px solid;
+  border-bottom: 0;
+  border-left: 0;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 2px);
+  transform: translate(-50%, -50%) rotate(-135deg);
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.carousel .swiper-button-next::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: calc(50% - 2px);
+}
+
+/* Essential pagination styling */
+.carousel .swiper-pagination {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  row-gap: 8px;
+  margin-top: 16px;
+  max-width: 100%;
+}
+
+.carousel .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  max-width: 14px;
+  max-height: 14px;
+  border-radius: 50%;
+  background: rgb(128 128 128 / 50%);
+  margin: 0;
+  cursor: pointer;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.carousel .swiper-pagination-bullet-active {
+  background-color: var(--cor-global-azul-20, #007bff);
+  border-color: var(--cor-global-azul-30, #0056b3);
+}
+
+/* Mobile responsive pagination styling */
+@media (width <= 480px) {
+  .carousel .swiper-pagination {
+    gap: 0;
+    row-gap: 8px;
+    margin-top: 12px;
+  }
+  
+  .carousel .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    min-height: 12px;
+    max-width: 12px;
+    max-height: 12px;
+  }
+}
+
+/* Very narrow screens - ensure dots wrap properly */
+@media (width <= 320px) {
+  .carousel .swiper-pagination {
+    gap: 0;
+    row-gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .carousel .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+  }
+}
+
+/* Aspect ratio handling */
+.carousel.center {
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.carousel.aspect-ratio-16-9 {
+  aspect-ratio: 16/9;
+  max-width: 1013px;
+}
+
+.carousel.aspect-ratio-1-1 {
+  aspect-ratio: 1/1;
+  max-width: 570px;
+}
+
+.carousel.aspect-ratio-16-9 .swiper-slide {
+  aspect-ratio: 16/9;
+  max-height: 570px;
+  height: unset;
+}
+
+.carousel.aspect-ratio-1-1 .swiper-slide {
+  aspect-ratio: 1/1;
+  max-height: 570px;
+  height: unset;
+}
+
+.carousel:has(div.block.aspect-ratio-16-9) {
+  aspect-ratio: 16/9;
+  width: 100%;
+  max-width: 100%;
+  max-height: 570px;
+}
+
+.carousel:has(div.block.aspect-ratio-1-1) {
+  aspect-ratio: 1/1;
+  width: 100%;
+  max-width: 100%;
+  max-height: 570px;
+}
+
+.carousel .swiper-slide:has(.carousel-slide-content[data-align='center']) {
+  align-items: center;
+}
+
+.carousel .swiper-slide:has(.carousel-slide-content[data-align='right']) {
+  align-items: flex-end;
+}
+
+/* Content styling */
+.carousel .swiper-slide .carousel-slide-content {
+  z-index: 1;
+  margin: 68px;
+  padding: 16px;
+  position: relative;
+  width: var(--slide-content-width, auto);
+  display: none;
+}
+
+/* Lightbox styling */
+.carousel-lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: var(--cor-global-acento, rgb(0 0 0 / 80%));
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* Lightbox Swiper styling */
+.carousel-lightbox-swiper {
+  width: 100%;
+  height: 95vh;
+  max-width: calc(100vw - 160px);
+  max-height: calc(100vh - 60px);
+  position: relative;
+}
+
+/* Swiper Zoom Module Styling */
+.carousel-lightbox-swiper .swiper-zoom-container,
+.carousel-lightbox-swiper .swiper-slide .swiper-zoom-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-lightbox-swiper .swiper-slide-zoomed,
+.carousel-lightbox-swiper .swiper-slide.swiper-slide-zoomed {
+  cursor: grab;
+}
+
+.carousel-lightbox-swiper .swiper-slide-zoomed:active,
+.carousel-lightbox-swiper .swiper-slide.swiper-slide-zoomed:active {
+  cursor: grabbing;
+}
+
+/* Override height constraints for lightbox slides only */
+.carousel-lightbox .carousel-lightbox-slide {
+  height: auto !important;
+  max-height: none !important;
+  min-height: auto !important;
+}
+
+/* Ensure only one slide is visible at a time in lightbox */
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-lightbox-swiper .swiper-slide {
+  width: 100% !important;
+  margin-right: 0 !important;
+}
+
+/* Apply rounded corners and shadow only to active/visible slides */
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-lightbox-swiper .swiper-slide-active picture img {
+  border-radius: 12px !important;
+
+  /* Ensure active slide maintains proper sizing */
+  max-width: calc(100% - 200px);
+  max-height: calc(100vh - 200px);
+  width: 100%;
+  height: auto;
+  margin: 50px 100px;
+  filter: drop-shadow(0 0 30px rgb(0 0 0 / 30%));
+
+  /* Ensure image can receive clicks and is properly positioned for click detection */
+  position: relative;
+  z-index: 2;
+}
+
+/* Ensure portrait images (taller than wide) are constrained by height */
+.carousel-lightbox-slide picture img[style*="height"] {
+  max-height: calc(100vh - 200px) !important;
+  height: auto !important;
+}
+
+/* Remove styling from non-active slides */
+.carousel-lightbox-swiper .swiper-slide:not(.swiper-slide-active) picture img {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-lightbox-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-lightbox-slide picture {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-lightbox-slide picture img {
+  max-width: calc(100% - 40px);
+  max-height: calc(100vh - 200px);
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: none;
+
+  /* Basic image styling */
+  display: block;
+  border: none;
+  outline: none;
+  margin: 0 20px;
+
+  /* Ensure image container matches image dimensions exactly */
+  box-sizing: border-box;
+
+  /* Ensure image is above the overlay for proper click handling */
+  position: relative;
+  z-index: 2;
+}
+
+/* Critical: Zoom effect styling for lightbox images */
+.carousel-lightbox-swiper .swiper-slide-zoomed .swiper-zoom-container {
+  cursor: grab;
+
+  /* Prevent default image drag behavior */
+  user-select: none;
+}
+
+.carousel-lightbox-swiper .swiper-slide-zoomed .swiper-zoom-container:active {
+  cursor: grabbing;
+}
+
+
+
+/* Ensure zoomed images fill the entire lightbox container */
+.carousel-lightbox.open .swiper-slide-zoomed picture img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  display: block !important;
+
+  /* Prevent default drag behavior */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+
+  /* Enable manual panning transforms */
+  position: relative !important;
+  will-change: transform !important;
+  transition: none !important;
+
+  /* Enable zoom panning */
+  transform-origin: center center !important;
+
+  /* Allow image to scale beyond container bounds */
+  min-width: 200% !important;
+  min-height: 200% !important;
+
+  /* Optimize panning performance - disable any potential delays */
+  backface-visibility: hidden !important;
+  perspective: none !important;
+  
+  /* Force hardware acceleration for smooth panning */
+  transform-style: flat !important;
+}
+
+/* Mobile OS device styling - allow native pinch-to-zoom in lightbox */
+
+/* Windows touch devices are handled separately to allow custom zoom */
+@media (width <= 768px), (pointer: coarse) {
+  /* Ensure all lightbox images allow native OS pinch-to-zoom */
+  .carousel-lightbox.open picture img {
+    /* Allow native touch behavior including pinch-to-zoom */
+    touch-action: manipulation !important;
+    user-select: none !important;
+
+    /* Ensure no custom transforms interfere with native zoom */
+    transform: none !important;
+    transform-origin: initial !important;
+  }
+
+  .carousel-lightbox.open .swiper-slide-zoomed picture img {
+    /* Remove custom transforms on multi-touch devices - let native OS zoom work */
+    transform: none !important;
+    min-width: auto !important;
+    min-height: auto !important;
+    transform-origin: initial !important;
+
+    /* Allow native touch behavior including pinch-to-zoom */
+    touch-action: manipulation !important;
+  }
+
+  /* Ensure zoom button is hidden on multi-touch devices */
+  .carousel-lightbox-zoom {
+    display: none !important;
+  }
+
+  /* Prevent any custom zoom transforms on multi-touch devices in lightbox */
+  .carousel-lightbox.open .swiper-zoom-container {
+    transform: none !important;
+    transform-origin: initial !important;
+
+    /* Allow native touch behavior including pinch-to-zoom */
+    touch-action: manipulation !important;
+  }
+
+  .carousel-lightbox.open .swiper-zoom-container picture img {
+    transform: none !important;
+    transform-origin: initial !important;
+    min-width: auto !important;
+    min-height: auto !important;
+
+    /* Allow native touch behavior including pinch-to-zoom */
+    touch-action: manipulation !important;
+  }
+
+  /* Prevent any custom zoom-related classes from interfering with native touch */
+  .carousel-lightbox.open .swiper-slide-zoomed {
+    overflow: visible !important;
+  }
+
+  .carousel-lightbox.open .swiper-slide-zoomed .swiper-zoom-container {
+    overflow: visible !important;
+    cursor: default !important;
+
+    /* Allow native touch behavior including pinch-to-zoom */
+    touch-action: manipulation !important;
+  }
+
+  /* Ensure lightbox container allows native touch behavior */
+  .carousel-lightbox.open .carousel-lightbox-content {
+    touch-action: manipulation !important;
+  }
+
+  /* Ensure swiper container allows native touch behavior */
+  .carousel-lightbox.open .carousel-lightbox-swiper {
+    touch-action: manipulation !important;
+  }
+}
+
+
+
+/* Ensure ALL zoomed elements have no transitions for immediate response */
+.carousel-lightbox.open .swiper-slide-zoomed * {
+  transition: none !important;
+}
+
+/* Ensure zoomed slide container fills the lightbox */
+.carousel-lightbox.open .swiper-slide-zoomed {
+  overflow: visible !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Ensure zoom container can expand to fill the lightbox */
+.carousel-lightbox.open .swiper-slide-zoomed .swiper-zoom-container {
+  overflow: visible !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+
+  /* Enable manual panning */
+  cursor: grab !important;
+  user-select: none !important;
+
+  /* Ensure transform works properly */
+  will-change: transform !important;
+  transition: none !important;
+
+  /* Allow container to expand beyond lightbox bounds for zooming */
+  min-width: 200% !important;
+  min-height: 200% !important;
+}
+
+/* Windows touch device specific styling - allow custom zoom functionality */
+
+/* This targets Windows touch devices specifically using the class added by JavaScript */
+.carousel-lightbox.windows-touch-device.open picture img {
+  /* Allow custom zoom transforms on Windows touch devices */
+  transform: initial !important;
+  transform-origin: initial !important;
+
+  /* Allow custom touch behavior for zoom functionality */
+  touch-action: auto !important;
+}
+
+.carousel-lightbox.windows-touch-device.open .swiper-zoom-container {
+  /* Allow custom zoom transforms on Windows touch devices */
+  transform: initial !important;
+  transform-origin: initial !important;
+
+  /* Allow custom touch behavior for zoom functionality */
+  touch-action: auto !important;
+}
+
+.carousel-lightbox.windows-touch-device.open .swiper-zoom-container picture img {
+  /* Allow custom zoom transforms on Windows touch devices */
+  transform: initial !important;
+  transform-origin: initial !important;
+
+  /* Allow custom touch behavior for zoom functionality */
+  touch-action: auto !important;
+}
+
+/* Allow custom zoom-related classes on Windows touch devices */
+.carousel-lightbox.windows-touch-device.open .swiper-slide-zoomed {
+  overflow: hidden !important;
+}
+
+.carousel-lightbox.windows-touch-device.open .swiper-slide-zoomed .swiper-zoom-container {
+  overflow: hidden !important;
+  cursor: grab !important;
+
+  /* Allow custom touch behavior for zoom functionality */
+  touch-action: auto !important;
+}
+
+/* Make the lightbox swiper fill the entire lightbox when zoomed */
+.carousel-lightbox.open .swiper-slide-zoomed .swiper-zoom-container picture {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Ensure the lightbox content has proper dimensions */
+.carousel-lightbox.open .carousel-lightbox-content {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  overflow: hidden !important;
+
+  /* Ensure clicks can be detected throughout the content area */
+  pointer-events: auto !important;
+
+  /* Ensure touch events work smoothly for swiping */
+  touch-action: pan-x pan-y;
+}
+
+/* When zoomed, allow content to expand for panning */
+.carousel-lightbox.open .swiper-slide-zoomed .carousel-lightbox-content {
+  overflow: visible !important;
+}
+
+/* Ensure the lightbox swiper takes full dimensions and overrides constraints */
+.carousel-lightbox.open .carousel-lightbox-swiper {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  max-width: none !important;
+  max-height: none !important;
+  overflow: hidden !important;
+}
+
+/* When zoomed, allow overflow for panning */
+.carousel-lightbox.open .swiper-slide-zoomed .carousel-lightbox-swiper {
+  overflow: visible !important;
+}
+
+
+
+/* Portrait images (taller than wide) - constrain by height */
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-lightbox-slide.portrait picture img {
+  width: auto;
+  height: 100%;
+  max-width: calc(100% - 40px);
+  max-height: calc(100vh - 200px);
+}
+
+/* Landscape images (wider than tall) - constrain by width */
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-lightbox-slide.landscape picture img {
+  width: 100%;
+  height: auto;
+  max-width: calc(100% - 40px);
+  max-height: calc(100vh - 200px);
+}
+
+
+
+
+
+
+
+/* Lightbox navigation styling */
+.carousel-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  background: rgb(0 0 0 / 50%);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+
+
+.carousel-lightbox-nav:hover {
+  background: rgb(0 0 0 / 75%);
+}
+
+.carousel-lightbox-nav::after {
+  display: block;
+  content: '';
+  border: 2px solid;
+  border-bottom: 0;
+  border-left: 0;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 2px);
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.carousel-lightbox-nav.swiper-button-next::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: calc(50% - 2px);
+}
+
+/* Lightbox pagination styling */
+.carousel-lightbox-pagination {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.carousel-lightbox-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 50%);
+  border: 2px solid rgb(0 0 0 / 30%);
+  margin: 0 6px;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.carousel-lightbox-pagination .swiper-pagination-bullet-active {
+  background-color: var(--cor-global-azul-20, #007bff);
+  border-color: var(--cor-global-azul-30, #0056b3);
+}
+
+section[class*="cor-global-"] .carousel-lightbox {
+  background: var(--cor-global-acento);
+}
+
+.carousel-lightbox.open {
+  display: flex;
+}
+
+.carousel-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+
+  /* Ensure backdrop can receive clicks for closing lightbox */
+  pointer-events: auto;
+  z-index: 1;
+}
+
+body.lightbox-open .carousel:not(:has(.carousel-lightbox.open)),
+body.lightbox-open .section[class*=" cor-"]:not(.carousel-container),
+body.lightbox-open header,
+body.lightbox-open footer,
+body.lightbox-open a.whatsapp-fixed {
+  display: none;
+}
+
+.carousel-lightbox-close {
+  position: fixed;
+  top: 21px;
+  right: 32px;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10001;
+  box-shadow: none;
+  transition: text-shadow 0.2s;
+  line-height: 1;
+}
+
+.carousel .carousel-lightbox-arrow button:hover,
+.carousel .carousel-lightbox-arrow button:focus-visible {
+  background-color: rgba(19 19 19 / 75%);
+}
+
+.carousel .carousel-lightbox-arrow::after {
+  display: block;
+  content: '';
+  border: 2px solid;
+  border-bottom: 0;
+  border-left: 0;
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 2px);
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.carousel .carousel-lightbox-arrow.carousel-lightbox-next::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: calc(50% - 2px);
+}
+
+.carousel-lightbox-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10001;
+  background: rgb(0 0 0 / 50%);
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+}
+
+.carousel-lightbox-prev {
+  left: 64px;
+}
+
+.carousel-lightbox-next {
+  right: 64px;
+}
+
+.carousel-lightbox-arrow:hover,
+.carousel-lightbox-arrow:focus {
+  box-shadow: 0 0 12px 4px rgb(255 255 255 / 50%);
+  background-color: rgba(19 19 19 / 25%);
+}
+
+.carousel-lightbox-indicators {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-lightbox-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 50%);
+  border: 2px solid rgb(0 0 0 / 30%);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel-lightbox-indicators button.active {
+  background-color: var(--cor-global-azul-20);
+  border-color: var(--cor-global-azul-30);
+}
+
+.carousel-lightbox-counter {
+  position: fixed;
+  top: 26px;
+  left: 46px;
+  z-index: 10002;
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: inherit;
+  font-weight: 900;
+}
+
+.carousel-lightbox-subtitle {
+  position: fixed;
+  bottom: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10002;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: 600;
+  text-align: center;
+  max-width: calc(100vw - 128px);
+  line-height: 1.1;
+}
+
+.carousel-lightbox-text {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10002;
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 400;
+  text-align: center;
+  max-width: calc(100vw - 128px);
+  line-height: 1.1;
+}
+
+.carousel-lightbox-zoom {
+  position: fixed;
+  top: 22px;
+  right: 65px;
+  z-index: 10002;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2.2rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+  overflow: visible;
+}
+
+.carousel-lightbox-zoom, .carousel-lightbox-text,
+.carousel-lightbox-subtitle, .carousel-lightbox-counter,
+.carousel-lightbox-close, .zoom-handle {
+  text-shadow: 0 1px 3px rgb(0 0 0 / 90%);
+}
+
+.carousel-lightbox-close:hover,
+.carousel-lightbox-close:focus {
+  box-shadow: none;
+  background: none;
+  text-shadow: 0 0 8px #fff, 0 0 4px #fff;
+}
+
+.carousel-lightbox-zoom:hover,
+.carousel-lightbox-zoom:focus {
+  box-shadow: none;
+  background: none;
+  text-shadow: 0 1px 8px rgb(0 0 0 / 80%);
+}
+
+/* Show zoom button on Windows touch devices */
+.carousel-lightbox.windows-touch-device .carousel-lightbox-zoom {
+  display: block !important;
+}
+
+.zoom-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  overflow: visible;
+}
+
+.zoom-icon.zoom-in::before,
+.zoom-icon.zoom-out::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 90%);
+}
+
+.zoom-icon.zoom-in::after {
+  content: '+';
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.zoom-icon.zoom-out::after {
+  content: '-';
+  position: absolute;
+  left: 9px;
+  top: 4px;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.zoom-handle {
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  height: 14px;
+  border: 4px solid #fff;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  transform: rotate(-45deg);
+  box-shadow: 1px 2px 2px rgb(0 0 0 / 30%);
+}
+
+.carousel-lightbox-image img.zoomed {
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover;
+  border-radius: 0;
+  transition: none;
+}
+
+.carousel-lightbox-image img.slide-out-left {
+  transform: translateX(100vw);
+  opacity: 0;
+}
+
+.carousel-lightbox-image img.slide-out-right {
+  transform: translateX(-100vw);
+  opacity: 0;
+}
+
+.carousel-lightbox-image img.slide-in-left {
+  transform: translateX(100vw);
+  opacity: 0;
+  animation: slide-in-left 0.2s forwards;
+}
+
+.carousel-lightbox-image img.slide-in-right {
+  transform: translateX(-100vw);
+  opacity: 0;
+  animation: slide-in-right 0.2s forwards;
+}
+
+@keyframes slide-in-left {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (width >= 600px) {
+  .carousel .swiper-slide .carousel-slide-content {
+    --slide-content-width: calc((100% - 184px) / 2);
+
+    margin: 92px;
+  }
+
+  .carousel .swiper-slide .carousel-slide-content[data-align='justify'] {
+    --slide-content-width: auto;
+  }
+}
+
+@media (width < 900px) {
+  .carousel-lightbox-image {
+    max-width: 100vw;
+  }
+  
+  .carousel-lightbox-image img {
+    max-width: 100vw;
+    height: auto;
+    border-radius: 0;
+  }
+  
+  .carousel-lightbox-image img.portrait, .carousel-lightbox-image img.landscape {
+    max-width: 100vw;
+    height: auto;
+  }
+
+  .carousel .swiper-button-prev, .carousel-lightbox-prev {
+    left: 2px;
+  }
+  
+  .carousel .swiper-button-next, .carousel-lightbox-next {
+    right: 2px;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "mappings": [
+    "/content/meusensia/:/",
+    "/content/meusensia/framework/config:/.helix/config.json",
+    "/content/meusensia/framework/metadata:/metadata.json",
+    "/content/meusensia/framework/placeholders:/placeholders.json",
+    "/content/meusensia/framework/taxonomy:/taxonomy.json",
+    "/content/meusensia/framework/headers:/.helix/headers.json",
+    "/content/meusensia/imovel/query-index.json:/imovel/query-index.json",
+    "/content/dam/meusensia/icons/:/icons/",
+    "/content/meusensia/library/blocks:/library/blocks.json"
+  ],
+  "includes": [
+    "/content/meusensia/",
+    "/content/dam/meusensia/"
+  ]
+}

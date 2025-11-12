@@ -1,0 +1,1868 @@
+[
+  {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Título"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "pageTitle",
+        "label": "Título da página"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Descrição da página"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Imagem da página",
+        "multi": false
+      },
+      {
+        "component": "aem-tag",
+        "label": "Outras tags/other",
+        "name": "tags",
+        "valueType": "string",
+        "rootPath": "/content/cq:tags"
+      },
+      {
+        "component": "text",
+        "name": "template",
+        "valueType": "string",
+        "label": "Modelo de página"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "card-title",
+        "label": "Título - H1 oculto"
+      }
+    ]
+  },
+  {
+    "id": "imovel-default-metadata",
+    "fields": [
+      {
+        "component": "tab",
+        "label": "Meta de página e card",
+        "name": "tab1"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Título"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "pageTitle",
+        "label": "Título da página"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Descrição da página"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "card-title",
+        "label": "Título card + H1 oculto"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Imagem da página + card",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "label": "Status de Obra (card)",
+        "name": "card-status",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-tag",
+        "label": "Localizações",
+        "name": "tags-location-card",
+        "valueType": "string",
+        "rootPath": "/content/cq:tags/meusensia/locations-for-cards",
+        "multi": false
+      },
+      {
+        "component": "container",
+        "name": "destaques",
+        "label": "DESTAQUES + ÍCONES ---------------- ",
+        "collapsible": false,
+        "fields": [
+          {
+            "component": "aem-tag",
+            "valueType": "string",
+            "name": "card-quartos",
+            "label": "Quartos (card)",
+            "rootPath": "/content/cq:tags/meusensia/acomodacaos"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "card-area",
+            "label": "Área (card)"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "card-highlight",
+            "label": "Destaque (apenas card)"
+          },
+          {
+            "component": "text",
+            "name": "subheader-highlight",
+            "label": "Destaque (apenas Subheader)",
+            "valueType": "string"
+          },
+          {
+            "component": "select",
+            "name": "subheader-highlight-icon",
+            "value": "",
+            "label": "Destaque (apenas subheader) - Icone",
+            "multi": false,
+            "options": [
+              {
+                "name": "Estrela",
+                "value": "estrela"
+              },
+              {
+                "name": "Marca de verificação",
+                "value": "marcaverificacao"
+              },
+              {
+                "name": "Área",
+                "value": "area"
+              },
+              {
+                "name": "Mapa",
+                "value": "mapa"
+              },
+              {
+                "name": "Waze",
+                "value": "waze"
+              },
+              {
+                "name": "Cifrão",
+                "value": "cifrao"
+              },
+              {
+                "name": "Piscina",
+                "value": "piscina"
+              },
+              {
+                "name": "Garagem",
+                "value": "carro"
+              },
+              {
+                "name": "Gourmet",
+                "value": "gourmet"
+              },
+              {
+                "name": "Dormitorio",
+                "value": "dormitorios"
+              },
+              {
+                "name": "Endereço",
+                "value": "endereco"
+              },
+              {
+                "name": "Café",
+                "value": "cafe"
+              },
+              {
+                "name": "Martini",
+                "value": "martini"
+              },
+              {
+                "name": "(nenhum/none)",
+                "value": "nenhum"
+              }
+            ]
+          },
+          {
+            "component": "text",
+            "name": "subheader-extra",
+            "label": "Destaque (extra Subheader)",
+            "valueType": "string"
+          },
+          {
+            "component": "select",
+            "name": "subheader-extra-icon",
+            "value": "",
+            "label": "Destaque (extra subheader) - Icone",
+            "multi": false,
+            "options": [
+              {
+                "name": "Estrela",
+                "value": "estrela"
+              },
+              {
+                "name": "Marca de verificação",
+                "value": "marcaverificacao"
+              },
+              {
+                "name": "Área",
+                "value": "area"
+              },
+              {
+                "name": "Mapa",
+                "value": "mapa"
+              },
+              {
+                "name": "Waze",
+                "value": "waze"
+              },
+              {
+                "name": "Cifrão",
+                "value": "cifrao"
+              },
+              {
+                "name": "Piscina",
+                "value": "piscina"
+              },
+              {
+                "name": "Garagem",
+                "value": "carro"
+              },
+              {
+                "name": "Gourmet",
+                "value": "gourmet"
+              },
+              {
+                "name": "Dormitorio",
+                "value": "dormitorios"
+              },
+              {
+                "name": "Endereço",
+                "value": "endereco"
+              },
+              {
+                "name": "Café",
+                "value": "cafe"
+              },
+              {
+                "name": "Martini",
+                "value": "martini"
+              },
+              {
+                "name": "(nenhum/none)",
+                "value": "nenhum"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "label": "Tags de search",
+        "name": "tab2"
+      },
+      {
+        "component": "aem-tag",
+        "label": "Itens de Lazer",
+        "description": "(Itens de lazer também usado para slider-lazer e Ficha Técnica)",
+        "name": "tags-lazer",
+        "valueType": "string",
+        "rootPath": "/content/cq:tags/meusensia/itens-de-lazer"
+      },
+      {
+        "component": "aem-tag",
+        "label": "Status de Obra (search)",
+        "name": "tags-status",
+        "valueType": "string",
+        "rootPath": "/content/cq:tags/meusensia/status-de-obra"
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "search-dormitorios-min",
+        "label": "Dormitórios mínimos",
+        "placeholder": null,
+        "validation": {
+          "numberMax": 5,
+          "customErrorMsg": "O número máximo permitido é de 5"
+        }
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "search-dormitorios-max",
+        "label": "Dormitórios máximos",
+        "placeholder": null,
+        "validation": {
+          "numberMax": 5,
+          "customErrorMsg": "O número máximo permitido é de 5"
+        }
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "card-price",
+        "label": "Preço inicial em BRL",
+        "placeholder": null,
+        "validation": {
+          "numberMax": 5000000,
+          "customErrorMsg": "O preço máximo permitido é de 5.000.000"
+        }
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "search-preco-max",
+        "label": "Preço máximo em BRL",
+        "placeholder": null,
+        "validation": {
+          "numberMax": 5000000,
+          "customErrorMsg": "O preço máximo permitido é de 5.000.000"
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "search-area-min",
+        "label": "Área mínima em m²",
+        "placeholder": null,
+        "validation": {
+          "pattern": "^\\d+(\\.\\d{1,2})?$",
+          "customErrorMsg": "A área deve conter apenas números com até 2 casas decimais"
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "search-area-max",
+        "label": "Área máxima em m²",
+        "placeholder": null,
+        "validation": {
+          "pattern": "^\\d+(\\.\\d{1,2})?$",
+          "customErrorMsg": "A área deve conter apenas números com até 2 casas decimais"
+        }
+      },
+      {
+        "component": "aem-tag",
+        "label": "Outras tags/other",
+        "name": "tags",
+        "valueType": "string",
+        "rootPath": "/content/cq:tags"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "endereco-completo",
+        "label": "Endereco da Rua"
+      },
+      {
+        "component": "text",
+        "name": "template",
+        "valueType": "string",
+        "value": "",
+        "label": "Modelo de página"
+      }
+    ]
+  },
+  {
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Imagem",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "texto Alt da imagem"
+      }
+    ]
+  },
+  {
+    "id": "title",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "titleType",
+        "label": "Title Type",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "button",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "linkType",
+        "label": "Estilo",
+        "options": [
+          {
+            "name": "Default (somente texto)",
+            "value": ""
+          },
+          {
+            "name": "Primary (verde escuro)",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary (verde claro)",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Section Name",
+        "description": "O rótulo mostrado para esta seção na Árvore de Conteúdo"
+      },
+      {
+        "component": "tab",
+        "label": "Configurações de estilo",
+        "name": "tab1"
+      },
+      {
+        "component": "text",
+        "name": "id",
+        "label": "ID",
+        "description": "Adiciona um ID à seção"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Estilo/Style",
+        "options": [
+          {
+            "name": "Cor de fundo/bg color",
+            "children": [
+              {
+                "name": "cor primaria/green-d",
+                "value": "cor-global-primaria"
+              },
+              {
+                "name": "cor verde 20/green-l",
+                "value": "cor-global-secundaria"
+              },
+              {
+                "name": "cor verde 30/green-ld",
+                "value": "cor-global-verde-30"
+              },
+              {
+                "name": "cor verde 80/green",
+                "value": "cor-global-verde-80"
+              },
+              {
+                "name": "cor azul 20/blue",
+                "value": "cor-global-azul-20"
+              },
+              {
+                "name": "cor azul 30/blue-d",
+                "value": "cor-global-azul-30"
+              },
+              {
+                "name": "cor branco/white",
+                "value": "cor-global-branco"
+              },
+              {
+                "name": "cor preto/black",
+                "value": "cor-global-preto"
+              }
+            ]
+          },
+          {
+            "name": "conteúdo 50% no desktop",
+            "children": [
+              {
+                "name": "direito, fundo de ângulo verde escuro (tour)",
+                "value": "angle-right"
+              },
+              {
+                "name": "esquerda, fundo de ângulo verde claro (loja)",
+                "value": "angle-left"
+              }
+            ]
+          },
+          {
+            "name": "Outra/other",
+            "children": [
+              {
+                "name": "flex",
+                "value": "flex"
+              },
+              {
+                "name": "larga/wide",
+                "value": "wide"
+              },
+              {
+                "name": "Centro/Center",
+                "value": "center"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "label": "Configuração de imagens de fundo",
+        "name": "tab2"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image-mobile",
+        "label": "Imagem - Mobile",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "image-mobileAlt",
+        "label": "texto alternativo para imagem/altText",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image-tablet",
+        "label": "Imagem - Tablet",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image-desktop",
+        "label": "Imagem - Desktop",
+        "multi": false
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "object-fit",
+        "label": "ajuste de imagem/bg fit",
+        "value": "cobrir/cover",
+        "options": [
+          {
+            "name": "cover",
+            "value": "cobrir/cover"
+          },
+          {
+            "name": "contain",
+            "value": "conter/contain"
+          },
+          {
+            "name": "none",
+            "value": "nada/none"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "object-position",
+        "label": "posição da imagem/bg position",
+        "value": "centro/center",
+        "options": [
+          {
+            "name": "center",
+            "value": "centro/center"
+          },
+          {
+            "name": "top left",
+            "value": "superior esquerda/top left"
+          },
+          {
+            "name": "top right",
+            "value": "superior direita/top right"
+          },
+          {
+            "name": "bottom left",
+            "value": "inferior esquerda/bottom left"
+          },
+          {
+            "name": "bottom right",
+            "value": "inferior direita/bottom right"
+          }
+        ]
+      },
+      {
+        "component": "boolean",
+        "label": "no mobile, exiba a imagem atrás do conteúdo em vez de em cima (always absolute)",
+        "name": "absolute-always",
+        "valueType": "boolean"
+      }
+    ]
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Estilos",
+        "options": [
+          {
+            "name": "Largura 25%",
+            "value": "width-25"
+          },
+          {
+            "name": "Largura 33%",
+            "value": "width-33"
+          },
+          {
+            "name": "Largura 50%",
+            "value": "width-50"
+          },
+          {
+            "name": "Largura 66%",
+            "value": "width-66"
+          },
+          {
+            "name": "Largura 75%",
+            "value": "width-75"
+          },
+          {
+            "name": "Centro/Center",
+            "value": "center"
+          },
+          {
+            "name": "cor primaria/green-d",
+            "value": "cor-global-primaria"
+          },
+          {
+            "name": "cor verde 20/green-l",
+            "value": "cor-global-secundaria"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "summary",
+        "value": "",
+        "label": "Sumário"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Texto",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "cards-filter",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Text",
+        "description": "Os Cards são preenchidos automaticamente com base no URL da página"
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Estilos",
+        "options": [
+          {
+            "name": "Largura 25%",
+            "value": "width-25"
+          },
+          {
+            "name": "Largura 33%",
+            "value": "width-33"
+          },
+          {
+            "name": "Largura 50%",
+            "value": "width-50"
+          },
+          {
+            "name": "Largura 66%",
+            "value": "width-66"
+          },
+          {
+            "name": "Largura 75%",
+            "value": "width-75"
+          },
+          {
+            "name": "delgado/thin",
+            "value": "thin"
+          },
+          {
+            "name": "Centro/Center",
+            "value": "center"
+          },
+          {
+            "name": "imovel",
+            "value": "imovel"
+          },
+          {
+            "name": "adicionar bordas",
+            "value": "borders"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Estilos",
+        "options": [
+          {
+            "name": "Largura 25%",
+            "value": "width-25"
+          },
+          {
+            "name": "Largura 33%",
+            "value": "width-33"
+          },
+          {
+            "name": "Largura 50%",
+            "value": "width-50"
+          },
+          {
+            "name": "Largura 66%",
+            "value": "width-66"
+          },
+          {
+            "name": "Largura 75%",
+            "value": "width-75"
+          },
+          {
+            "name": "Autoslide",
+            "value": "autoslide"
+          },
+          {
+            "name": "Centro/Center",
+            "value": "center"
+          },
+          {
+            "name": "Proporção da tela/Aspect Ratio",
+            "children": [
+              {
+                "name": "16:9 Largo/Wide",
+                "value": "aspect-ratio-16-9"
+              },
+              {
+                "name": "1:1 Quadrado/Square",
+                "value": "aspect-ratio-1-1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "subtitle",
+        "label": "Título exibido abaixo da imagem no lightbox",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_mobile",
+        "label": "Imagem",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "image_mobileAlt",
+        "label": "Imagem - Texto Alt visível na caixa de luz",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "name": "link",
+        "label": "Link",
+        "valueType": "string",
+        "valueFormat": "regexp",
+        "description": "Insira um URL completo (ex. https://adobe.com).",
+        "required": false,
+        "validation": {
+          "regExp": "^https?://.+$",
+          "customErrorMsg": "Por favor, insira um URL válido."
+        }
+      }
+    ]
+  },
+  {
+    "id": "columns",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "columns",
+        "value": "",
+        "label": "Columns"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "rows",
+        "value": "",
+        "label": "Rows"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Estilos",
+        "options": [
+          {
+            "name": "Largura 25%",
+            "value": "width-25"
+          },
+          {
+            "name": "Largura 33%",
+            "value": "width-33"
+          },
+          {
+            "name": "Largura 50%",
+            "value": "width-50"
+          },
+          {
+            "name": "Largura 66%",
+            "value": "width-66"
+          },
+          {
+            "name": "Largura 75%",
+            "value": "width-75"
+          },
+          {
+            "name": "cor primaria/green-d",
+            "value": "cor-global-primaria"
+          },
+          {
+            "name": "cor verde 20/green-l",
+            "value": "cor-global-secundaria"
+          },
+          {
+            "name": "Centro/Center",
+            "value": "center"
+          },
+          {
+            "name": "borda branca/border",
+            "value": "border"
+          },
+          {
+            "name": "lojas (ícones + borda = verdes, títulos = brancos)",
+            "value": "lojas"
+          },
+          {
+            "name": "esconder no mobile + tablet",
+            "value": "desktop-only"
+          },
+          {
+            "name": "esconder no desktop",
+            "value": "mobile-only"
+          },
+          {
+            "name": "borda parcial esquerda (50% altura)",
+            "value": "partial-border"
+          },
+          {
+            "name": "lista numerada (enormes)",
+            "value": "numbered-list"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "embed_placeholder",
+        "label": "Placeholder Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "embed_placeholderAlt",
+        "value": "",
+        "label": "Placeholder Image Alt Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "embed_uri",
+        "label": "URI"
+      }
+    ]
+  },
+  {
+    "id": "fragment",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Reference",
+        "rootPath": "/content/meusensia/fragments"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Estilos",
+        "options": [
+          {
+            "name": "esconder no mobile + tablet",
+            "value": "desktop-only"
+          },
+          {
+            "name": "esconder no desktop",
+            "value": "mobile-only"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_mobile",
+        "label": "Imagem - Mobile",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "image_mobileAlt",
+        "label": "Texto alt para imagem",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_tablet",
+        "label": "Imagem - Tablet",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_desktop",
+        "label": "Imagem - Desktop",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Texto branco opcional no canto superior esquerdo da imagem",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Estilos",
+        "options": [
+          {
+            "name": "Largura 25%",
+            "value": "width-25"
+          },
+          {
+            "name": "Largura 33%",
+            "value": "width-33"
+          },
+          {
+            "name": "Largura 50%",
+            "value": "width-50"
+          },
+          {
+            "name": "Largura 66%",
+            "value": "width-66"
+          },
+          {
+            "name": "Largura 75%",
+            "value": "width-75"
+          },
+          {
+            "name": "Centro/Center",
+            "value": "center"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "library-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "hidden": "true",
+        "name": "name",
+        "label": "Library Metadata name(hidden)"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description of the block variant"
+      }
+    ]
+  },
+  {
+    "id": "lojas-filter",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "text",
+        "description": "Texto de apoio para o filtro / title text"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Estilos",
+        "options": [
+          {
+            "name": "cor primaria/green-d",
+            "value": "cor-global-primaria"
+          },
+          {
+            "name": "cor verde 20/green-l",
+            "value": "cor-global-secundaria"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "modal",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "id": "quote",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "quotation",
+        "value": "",
+        "label": "Quotation"
+      },
+      {
+        "component": "richtext",
+        "name": "attribution",
+        "value": "",
+        "label": "Attribution",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Estilos",
+        "options": [
+          {
+            "name": "Largura 25%",
+            "value": "width-25"
+          },
+          {
+            "name": "Largura 33%",
+            "value": "width-33"
+          },
+          {
+            "name": "Largura 50%",
+            "value": "width-50"
+          },
+          {
+            "name": "Largura 66%",
+            "value": "width-66"
+          },
+          {
+            "name": "Largura 75%",
+            "value": "width-75"
+          },
+          {
+            "name": "Centro/Center",
+            "value": "center"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "search",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "index",
+        "label": "Index"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Search Type",
+            "children": [
+              {
+                "name": "Minimal",
+                "value": "minimal"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "slider-lazer",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Estilos",
+        "description": "Os slides são preenchidos apenas pelas tags do tipo 'itens-de-lazer' nas propriedades da página",
+        "value": [
+          "desktop-3",
+          "aspect-ratio-1-1"
+        ],
+        "options": [
+          {
+            "name": "3 slides mostrados desktop",
+            "value": "desktop-3"
+          },
+          {
+            "name": "Autoslide",
+            "value": "autoslide"
+          },
+          {
+            "name": "Proporção da tela/Aspect Ratio",
+            "children": [
+              {
+                "name": "16:9 Largo/Wide",
+                "value": "aspect-ratio-16-9"
+              },
+              {
+                "name": "1:1 Quadrado/Square",
+                "value": "aspect-ratio-1-1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "slider",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Estilos",
+        "options": [
+          {
+            "name": "Largura 25%",
+            "value": "width-25"
+          },
+          {
+            "name": "Largura 33%",
+            "value": "width-33"
+          },
+          {
+            "name": "Largura 50%",
+            "value": "width-50"
+          },
+          {
+            "name": "Largura 66%",
+            "value": "width-66"
+          },
+          {
+            "name": "Largura 75%",
+            "value": "width-75"
+          },
+          {
+            "name": "3 slides mostrados desktop",
+            "value": "desktop-3"
+          },
+          {
+            "name": "Autoslide",
+            "value": "autoslide"
+          },
+          {
+            "name": "Centro/Center",
+            "value": "center"
+          },
+          {
+            "name": "Proporção da tela/Aspect Ratio",
+            "children": [
+              {
+                "name": "16:9 Largo/Wide",
+                "value": "aspect-ratio-16-9"
+              },
+              {
+                "name": "1:1 Quadrado/Square",
+                "value": "aspect-ratio-1-1"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "slider-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Título / Title",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_mobile",
+        "label": "Image - Mobile",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "image_mobileAlt",
+        "label": "Alt text for image",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_tablet",
+        "label": "Image - Tablet",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_desktop",
+        "label": "Image - Desktop",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "link",
+        "label": "Link",
+        "valueType": "string",
+        "valueFormat": "regexp",
+        "description": "Insira um URL completo (ex. https://adobe.com).",
+        "required": false,
+        "validation": {
+          "regExp": "^https?://.+$",
+          "customErrorMsg": "Insira um URL válido."
+        }
+      }
+    ]
+  },
+  {
+    "id": "subheader",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "ButtonLink",
+        "value": "#formulario-cadastro"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Texto do botão",
+        "value": "Fale com o especialista"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Título do link",
+        "value": "Fale com o especialista"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Destaques manuais para Subheader",
+        "value": "",
+        "description": "(Editar para substituir a lista de ícones preenchida automaticamente nas propriedades da página pelo seu conteúdo manual)"
+      }
+    ]
+  },
+  {
+    "id": "table",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "maxSize": 3,
+        "options": [
+          {
+            "name": "Border",
+            "children": [
+              {
+                "name": "None",
+                "value": "no-border"
+              }
+            ]
+          },
+          {
+            "name": "Header",
+            "children": [
+              {
+                "name": "No Header",
+                "value": "no-header"
+              }
+            ]
+          },
+          {
+            "name": "Width",
+            "children": [
+              {
+                "name": "Largura 25%",
+                "value": "width-25"
+              },
+              {
+                "name": "Largura 33%",
+                "value": "width-33"
+              },
+              {
+                "name": "Largura 50%",
+                "value": "width-50"
+              },
+              {
+                "name": "Largura 66%",
+                "value": "width-66"
+              },
+              {
+                "name": "Largura 75%",
+                "value": "width-75"
+              },
+              {
+                "name": "Centro/Center",
+                "value": "center"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "filter",
+        "label": "Columns",
+        "valueType": "string",
+        "value": "table",
+        "options": [
+          {
+            "name": "1 Column",
+            "value": "table"
+          },
+          {
+            "name": "2 Columns",
+            "value": "table-2-columns"
+          },
+          {
+            "name": "3 Columns",
+            "value": "table-3-columns"
+          },
+          {
+            "name": "4 Columns",
+            "value": "table-4-columns"
+          },
+          {
+            "name": "5 Columns",
+            "value": "table-5-columns"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "table-row",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1"
+      }
+    ]
+  },
+  {
+    "id": "table-col-2",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column2text",
+        "label": "Column2"
+      }
+    ]
+  },
+  {
+    "id": "table-col-3",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column2text",
+        "label": "Column2"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column3text",
+        "label": "Column3"
+      }
+    ]
+  },
+  {
+    "id": "table-col-4",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column1text",
+        "label": "Column1"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column2text",
+        "label": "Column2"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column3text",
+        "label": "Column3"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "column4text",
+        "label": "Column4"
+      }
+    ]
+  },
+  {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Estilos",
+        "options": [
+          {
+            "name": "Largura 25%",
+            "value": "width-25"
+          },
+          {
+            "name": "Largura 33%",
+            "value": "width-33"
+          },
+          {
+            "name": "Largura 50%",
+            "value": "width-50"
+          },
+          {
+            "name": "Largura 66%",
+            "value": "width-66"
+          },
+          {
+            "name": "Largura 75%",
+            "value": "width-75"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tabName",
+        "value": "",
+        "label": "Nome do Tab"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "value": "",
+        "label": "Texto",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_mobile",
+        "label": "Imagem - Mobile",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "image_mobileAlt",
+        "label": "Texto alt da imagem",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_tablet",
+        "label": "Imagem - Tablet",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_desktop",
+        "label": "Imagem - Desktop",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "video",
+    "fields": [
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "uri",
+        "label": "Video"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Auto Play",
+            "children": [
+              {
+                "name": "AutoPlay",
+                "value": "autoplay"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "placeholder_image",
+        "label": "Placeholder Image",
+        "multi": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "placeholder_imageAlt",
+        "value": "",
+        "label": "Placeholder Image Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "wedge-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Nome da seção/Section",
+        "value": "Section ângulo verde",
+        "description": "O rótulo mostrado para esta seção na Árvore de Conteúdo"
+      },
+      {
+        "component": "tab",
+        "label": "Configurações de estilo",
+        "name": "tab1"
+      },
+      {
+        "component": "text",
+        "name": "id",
+        "label": "ID",
+        "description": "Adiciona um ID à seção"
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Estilo/Style",
+        "options": [
+          {
+            "name": "Cor de fundo/bg color",
+            "children": [
+              {
+                "name": "cor verde 30/green-ld",
+                "value": "cor-global-verde-30"
+              },
+              {
+                "name": "cor verde 80/green",
+                "value": "cor-global-verde-80"
+              }
+            ]
+          },
+          {
+            "name": "conteúdo 50% no desktop",
+            "children": [
+              {
+                "name": "direito, fundo de ângulo verde escuro (tour)",
+                "value": "angle-right"
+              },
+              {
+                "name": "esquerda, fundo de ângulo verde claro (loja)",
+                "value": "angle-left"
+              },
+              {
+                "name": "direito,fundo quadrado sólido",
+                "value": "square-right"
+              },
+              {
+                "name": "esquerda, fundo quadrado sólido",
+                "value": "square-left"
+              }
+            ]
+          },
+          {
+            "name": "Outra/other",
+            "children": [
+              {
+                "name": "Centro/Center",
+                "value": "center"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "tab",
+        "label": "Configuração de imagens de fundo",
+        "name": "tab2"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image-mobile",
+        "label": "Imagem - Mobile",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "image-mobileAlt",
+        "label": "texto alternativo para imagem/altText",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image-tablet",
+        "label": "Imagem - Tablet",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image-desktop",
+        "label": "Imagem - Desktop",
+        "multi": false
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "object-fit",
+        "label": "ajuste de imagem/bg fit",
+        "value": "cobrir/cover",
+        "options": [
+          {
+            "name": "cover",
+            "value": "cobrir/cover"
+          },
+          {
+            "name": "contain",
+            "value": "conter/contain"
+          },
+          {
+            "name": "none",
+            "value": "nada/none"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "object-position",
+        "label": "posição da imagem/bg position",
+        "value": "centro/center",
+        "options": [
+          {
+            "name": "center",
+            "value": "centro/center"
+          },
+          {
+            "name": "top left",
+            "value": "superior esquerda/top left"
+          },
+          {
+            "name": "top right",
+            "value": "superior direita/top right"
+          },
+          {
+            "name": "bottom left",
+            "value": "inferior esquerda/bottom left"
+          },
+          {
+            "name": "bottom right",
+            "value": "inferior direita/bottom right"
+          }
+        ]
+      },
+      {
+        "component": "boolean",
+        "label": "no celular, exiba a imagem atrás do conteúdo em vez de em cima (always absolute)",
+        "name": "absolute-always",
+        "valueType": "boolean"
+      }
+    ]
+  }
+]

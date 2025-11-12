@@ -1,0 +1,121 @@
+{
+  "definitions": [
+    {
+      "title": "Columns",
+      "id": "columns",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/columns/v1/columns",
+            "template": {
+              "columns": "2",
+              "rows": "1"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "columns",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "number",
+          "name": "columns",
+          "value": "",
+          "label": "Columns"
+        },
+        {
+          "component": "text",
+          "valueType": "number",
+          "name": "rows",
+          "value": "",
+          "label": "Rows"
+        },
+        {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Estilos",
+          "options": [
+            {
+              "name": "Largura 25%",
+              "value": "width-25"
+            },
+            {
+              "name": "Largura 33%",
+              "value": "width-33"
+            },
+            {
+              "name": "Largura 50%",
+              "value": "width-50"
+            },
+            {
+              "name": "Largura 66%",
+              "value": "width-66"
+            },
+            {
+              "name": "Largura 75%",
+              "value": "width-75"
+            },
+            {
+              "name": "cor primaria/green-d",
+              "value": "cor-global-primaria"
+            },
+            {
+              "name": "cor verde 20/green-l",
+              "value": "cor-global-secundaria"
+            },
+            {
+              "name": "Centro/Center",
+              "value": "center"
+            },
+            {
+              "name": "borda branca/border",
+              "value": "border"
+            },
+            {
+              "name": "lojas (ícones + borda = verdes, títulos = brancos)",
+              "value": "lojas"
+            },
+            {
+              "name": "esconder no mobile + tablet",
+              "value": "desktop-only"
+            },
+            {
+              "name": "esconder no desktop",
+              "value": "mobile-only"
+            },
+            {
+              "name": "borda parcial esquerda (50% altura)",
+              "value": "partial-border"
+            },
+            {
+              "name": "lista numerada (enormes)",
+              "value": "numbered-list"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "columns",
+      "components": [
+        "column"
+      ]
+    },
+    {
+      "id": "column",
+      "components": [
+        "text",
+        "image",
+        "button",
+        "title",
+        "fragment"
+      ]
+    }
+  ]
+}

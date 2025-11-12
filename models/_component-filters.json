@@ -1,0 +1,15 @@
+[
+  {
+    "id": "main",
+    "components": [
+      "section",
+      "wedge-metadata"
+    ]
+  },
+  {
+    "...": "./_section.json#/filters"
+  },
+  {
+    "...": "../blocks/*/_*.json#/filters"
+  }
+]

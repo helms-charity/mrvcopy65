@@ -1,0 +1,116 @@
+version: 1
+
+indices:
+  pages:
+    include:
+      - '/**'
+    exclude:
+      - '/**.json'
+      - '/drafts'
+      - '/drafts/**'
+      - '/fragments'
+      - '/fragments/**'
+      - '/framework'
+      - '/framework/**'
+      - '/library/**'
+      - '/library'
+      - '/modals'
+      - '/modals/**'
+    target: /query-index.json
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, 'content')
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, 'content')
+      image:
+        select: head > meta[property="og:image"]
+        value: match(attribute(el, 'content'), "https:\/\/[^/]+(/.*)")
+      lastModified:
+        select: none
+        value: parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+
+  imovel:
+    include:
+      - '/imovel/**'
+    target: /imovel/query-index.json
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: attribute(el, 'content')
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, 'content')
+      listingName:
+        select: head > meta[name="card-title"]
+        value: attribute(el, 'content')
+      description:
+        select: head > meta[name="description"]
+        value: attribute(el, 'content')
+      image:
+        select: head > meta[property="og:image"]
+        value: match(attribute(el, 'content'), "https:\/\/[^/]+(/.*)")
+      locationCard:
+        select: head > meta[name="tags-location-card"]
+        values: attribute(el, 'content')
+      locationState:
+        select: head > meta[name="tags-location-card"]
+        values: match(attribute(el, 'content'), "---([^-]+)$")
+      locationCity:
+        select: head > meta[name="tags-location-card"]
+        values: match(attribute(el, 'content'), "---([^-]+)---")
+      cardQuartos:
+        select: head > meta[name="card-quartos"]
+        values: attribute(el, 'content')
+      cardArea:
+        select: head > meta[name="card-area"]
+        values: attribute(el, 'content')
+      cardHighlight:
+        select: head > meta[name="card-highlight"]
+        values: attribute(el, 'content')
+      locationSearch:
+        select: head > meta[name="tags-location"]
+        values: attribute(el, 'content')
+      amenities:
+        select: head > meta[name="tags-lazer"]
+        values: attribute(el, 'content')
+      cardStatus:
+        select: head > meta[name="card-status"]
+        values: attribute(el, 'content')
+      availability:
+        select: head > meta[name="tags-status"]
+        values: attribute(el, 'content')
+      lastModified:
+        select: none
+        value: parseTimestamp(headers["last-modified"], "ddd, DD MMM YYYY hh:mm:ss GMT")
+      robots:
+        select: head > meta[name="robots"]
+        value: attribute(el, "content")
+      locationStreet:
+        select: head > meta[name="endereco-completo"]
+        values: attribute(el, 'content'),
+      searchPriceMin:
+        select: head > meta[name="card-price"]
+        values: attribute(el, 'content')
+      searchPriceMax:
+        select: head > meta[name="search-price-max"]
+        value: attribute(el, 'content')
+      searchAreaMin:
+        select: head > meta[name="search-area-min"]
+        value: attribute(el, 'content')
+      searchAreaMax:
+        select: head > meta[name="search-area-max"]
+        value: attribute(el, 'content')
+      searchDormitoriosMin:
+        select: head > meta[name="search-dormitorios-min"]
+        value: attribute(el, 'content')
+      searchDormitoriosMax:
+        select: head > meta[name="search-dormitorios-max"]
+        value: attribute(el, 'content')

@@ -1,0 +1,383 @@
+{
+  "models": [
+    {
+      "id": "page-metadata",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "jcr:title",
+          "label": "Título"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "pageTitle",
+          "label": "Título da página"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "jcr:description",
+          "label": "Descrição da página"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Imagem da página",
+          "multi": false
+        },
+        {
+          "component": "aem-tag",
+          "label": "Outras tags/other",
+          "name": "tags",
+          "valueType": "string",
+          "rootPath": "/content/cq:tags"
+        },
+        {
+          "component": "text",
+          "name": "template",
+          "valueType": "string",
+          "label": "Modelo de página"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "card-title",
+          "label": "Título - H1 oculto"
+        }
+      ]
+    },
+    {
+      "id": "imovel-default-metadata",
+      "fields": [
+        {
+          "component": "tab",
+          "label": "Meta de página e card",
+          "name": "tab1"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "jcr:title",
+          "label": "Título"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "pageTitle",
+          "label": "Título da página"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "jcr:description",
+          "label": "Descrição da página"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "card-title",
+          "label": "Título card + H1 oculto"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Imagem da página + card",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "label": "Status de Obra (card)",
+          "name": "card-status",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-tag",
+          "label": "Localizações",
+          "name": "tags-location-card",
+          "valueType": "string",
+          "rootPath": "/content/cq:tags/meusensia/locations-for-cards",
+          "multi": false
+        },
+        {
+          "component": "container",
+          "name": "destaques",
+          "label": "DESTAQUES + ÍCONES ---------------- ",
+          "collapsible": false,
+          "fields": [
+            {
+              "component": "aem-tag",
+              "valueType": "string",
+              "name": "card-quartos",
+              "label": "Quartos (card)",
+              "rootPath": "/content/cq:tags/meusensia/acomodacaos"
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "card-area",
+              "label": "Área (card)"
+            },
+            {
+              "component": "text",
+              "valueType": "string",
+              "name": "card-highlight",
+              "label": "Destaque (apenas card)"
+            },
+            {
+              "component": "text",
+              "name": "subheader-highlight",
+              "label": "Destaque (apenas Subheader)",
+              "valueType": "string"
+            },
+            {
+              "component": "select",
+              "name": "subheader-highlight-icon",
+              "value": "",
+              "label": "Destaque (apenas subheader) - Icone",
+              "multi": false,
+              "options": [
+                {
+                  "name": "Estrela",
+                  "value": "estrela"
+                },
+                {
+                  "name": "Marca de verificação",
+                  "value": "marcaverificacao"
+                },
+                {
+                  "name": "Área",
+                  "value": "area"
+                },
+                {
+                  "name": "Mapa",
+                  "value": "mapa"
+                },
+                {
+                  "name": "Waze",
+                  "value": "waze"
+                },
+                {
+                  "name": "Cifrão",
+                  "value": "cifrao"
+                },
+                {
+                  "name": "Piscina",
+                  "value": "piscina"
+                },
+                {
+                  "name": "Garagem",
+                  "value": "carro"
+                },
+                {
+                  "name": "Gourmet",
+                  "value": "gourmet"
+                },
+                {
+                  "name": "Dormitorio",
+                  "value": "dormitorios"
+                },
+                {
+                  "name": "Endereço",
+                  "value": "endereco"
+                },
+                {
+                  "name": "Café",
+                  "value": "cafe"
+                },
+                {
+                  "name": "Martini",
+                  "value": "martini"
+                },
+                {
+                  "name": "(nenhum/none)",
+                  "value": "nenhum"
+                }
+              ]
+            },
+            {
+              "component": "text",
+              "name": "subheader-extra",
+              "label": "Destaque (extra Subheader)",
+              "valueType": "string"
+            },
+            {
+              "component": "select",
+              "name": "subheader-extra-icon",
+              "value": "",
+              "label": "Destaque (extra subheader) - Icone",
+              "multi": false,
+              "options": [
+                {
+                  "name": "Estrela",
+                  "value": "estrela"
+                },
+                {
+                  "name": "Marca de verificação",
+                  "value": "marcaverificacao"
+                },
+                {
+                  "name": "Área",
+                  "value": "area"
+                },
+                {
+                  "name": "Mapa",
+                  "value": "mapa"
+                },
+                {
+                  "name": "Waze",
+                  "value": "waze"
+                },
+                {
+                  "name": "Cifrão",
+                  "value": "cifrao"
+                },
+                {
+                  "name": "Piscina",
+                  "value": "piscina"
+                },
+                {
+                  "name": "Garagem",
+                  "value": "carro"
+                },
+                {
+                  "name": "Gourmet",
+                  "value": "gourmet"
+                },
+                {
+                  "name": "Dormitorio",
+                  "value": "dormitorios"
+                },
+                {
+                  "name": "Endereço",
+                  "value": "endereco"
+                },
+                {
+                  "name": "Café",
+                  "value": "cafe"
+                },
+                {
+                  "name": "Martini",
+                  "value": "martini"
+                },
+                {
+                  "name": "(nenhum/none)",
+                  "value": "nenhum"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "tab",
+          "label": "Tags de search",
+          "name": "tab2"
+        },
+        {
+          "component": "aem-tag",
+          "label": "Itens de Lazer",
+          "description": "(Itens de lazer também usado para slider-lazer e Ficha Técnica)",
+          "name": "tags-lazer",
+          "valueType": "string",
+          "rootPath": "/content/cq:tags/meusensia/itens-de-lazer"
+        },
+        {
+          "component": "aem-tag",
+          "label": "Status de Obra (search)",
+          "name": "tags-status",
+          "valueType": "string",
+          "rootPath": "/content/cq:tags/meusensia/status-de-obra"
+        },
+        {
+          "component": "number",
+          "valueType": "number",
+          "name": "search-dormitorios-min",
+          "label": "Dormitórios mínimos",
+          "placeholder": null,
+          "validation": {
+            "numberMax": 5,
+            "customErrorMsg": "O número máximo permitido é de 5"
+          }
+        },
+        {
+          "component": "number",
+          "valueType": "number",
+          "name": "search-dormitorios-max",
+          "label": "Dormitórios máximos",
+          "placeholder": null,
+          "validation": {
+            "numberMax": 5,
+            "customErrorMsg": "O número máximo permitido é de 5"
+          }
+        },
+        {
+          "component": "number",
+          "valueType": "number",
+          "name": "card-price",
+          "label": "Preço inicial em BRL",
+          "placeholder": null,
+          "validation": {
+            "numberMax": 5000000,
+            "customErrorMsg": "O preço máximo permitido é de 5.000.000"
+          }
+        },
+        {
+          "component": "number",
+          "valueType": "number",
+          "name": "search-preco-max",
+          "label": "Preço máximo em BRL",
+          "placeholder": null,
+          "validation": {
+            "numberMax": 5000000,
+            "customErrorMsg": "O preço máximo permitido é de 5.000.000"
+          }
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "search-area-min",
+          "label": "Área mínima em m²",
+          "placeholder": null,
+          "validation": {
+            "pattern": "^\\d+(\\.\\d{1,2})?$",
+            "customErrorMsg": "A área deve conter apenas números com até 2 casas decimais"
+          }
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "search-area-max",
+          "label": "Área máxima em m²",
+          "placeholder": null,
+          "validation": {
+            "pattern": "^\\d+(\\.\\d{1,2})?$",
+            "customErrorMsg": "A área deve conter apenas números com até 2 casas decimais"
+          }
+        },
+        {
+          "component": "aem-tag",
+          "label": "Outras tags/other",
+          "name": "tags",
+          "valueType": "string",
+          "rootPath": "/content/cq:tags"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "endereco-completo",
+          "label": "Endereco da Rua"
+        },
+        {
+          "component": "text",
+          "name": "template",
+          "valueType": "string",
+          "value": "",
+          "label": "Modelo de página"
+        }
+      ]
+    }
+  ]
+}

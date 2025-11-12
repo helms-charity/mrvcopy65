@@ -1,0 +1,14 @@
+/* cards-filter.css */
+.cards-filter .breadcrumbs {
+    position: absolute;
+    top: 40px;
+    left: 5%;
+}
+
+.cards-filter .cards.imovel .load-more-container {
+    text-align: center;
+}
+
+#imovelcards .default-content-wrapper .button-container {
+    text-align: center;
+}

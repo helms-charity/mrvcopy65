@@ -1,0 +1,86 @@
+.accordion details {
+  /* border: 1px solid #dadada; */
+  padding: 10px 0;
+  overflow: hidden; /* Prevent content overflow during animation */
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.accordion details + details {
+  margin-top: 24px;
+}
+
+.accordion details p {
+  margin-bottom: 0.8em;
+}
+
+.accordion details .accordion-item-body {
+  padding: 0 32px;
+}
+
+/* Summary (Toggle) Styles */
+.accordion details summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  padding-right: 46px;
+  cursor: pointer;
+  list-style: none;
+  overflow: auto;
+  transition: background-color 0.2s ease-out;
+  font-size: var(--heading-font-size-s);
+}
+
+.accordion details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Chevron Indicator */
+.accordion details summary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%) rotate(135deg);
+  width: 6px;
+  height: 6px;
+  border: 2px solid;
+  border-width: 2px 2px 0 0;
+  transition: transform 0.3s ease-out;
+}
+
+.accordion details[open] summary::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Icon-Only Summaries (Hide Chevron, Align Left) */
+.accordion summary.icon-only {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0;
+}
+
+.accordion summary.icon-only::after {
+  display: none;
+}
+
+/* Expand/Collapse Icon Swap */
+.accordion summary.icon-only .icon-mais img {
+  content: url("/icons/mais.svg");
+  transition: opacity 0.2s ease-out;
+}
+
+.accordion details[open] summary.icon-only .icon-mais img {
+  content: url("/icons/menos.svg");
+}
+
+/* Centered Alignment for icon-exclamacao */
+.accordion .centered-icon-summary {
+  justify-content: center;
+  text-align: center;
+}
+
+.accordion .centered-icon-block .accordion-item-body {
+  text-align: center;
+}

@@ -1,0 +1,198 @@
+.form {
+  padding: 36px 24px;
+
+.sensia-contact-form {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.form-title {
+  margin: 0;
+}
+
+.field-group {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* stylelint-disable-next-line */
+.field-group:has(select#cityCode) {
+  display: none;
+}
+
+.field-group label {
+ display: none;
+}
+
+.field-group .required {
+  color: var(--cor-global-rosa-50);
+  font-weight: 600;
+}
+
+.field-group input,
+.field-group select {
+  width: 100%;
+  padding: 6px 0 6px 10px;
+  border: 1px solid var(--cor-global-verde-20);
+  border-radius: 8px;
+  background: transparent;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: var(--cor-global-branco);
+}
+
+.field-group select {
+  width: 100%;
+  padding: 6px 10px;
+}
+
+.field-group input:focus,
+.field-group select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgb(0 123 255 / 10%);
+}
+
+.field-group input.error,
+.field-group select.error {
+  border-color: var(--cor-global-rosa-30);
+  background-color: #fdf2f2;
+}
+
+.field-group input.error:focus,
+.field-group select.error:focus {
+  box-shadow: 0 0 0 3px rgb(231 76 60 / 10%);
+}
+
+.field-error {
+  color: var(--cor-global-rosa-30);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  margin-top: 0.25rem;
+}
+
+.checkbox-label {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.checkbox-label a {
+  color: var(--cor-global-verde-20);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.checkbox-label a:hover {
+  text-decoration: underline;
+}
+
+label.checkbox-label {
+  display: block;
+}
+
+.recaptcha-container {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 2px solid #e1e5e9;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recaptcha-container.error {
+  border-color: var(--cor-global-rosa-30);
+  background-color: #fdf2f2;
+}
+
+.submit-button:disabled {
+  background: var(--cor-global-verde-30);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.error-message,
+.success-message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+  display: none;
+}
+
+.error-message {
+  background-color: #fdf2f2;
+  color: var(--cor-global-rosa-30);
+  border: 1px solid #fecaca;
+}
+
+.success-message {
+  background-color: #f0fdf4;
+  color: var(--cor-global-verde-30);
+  border: 1px solid #bbf7d0;
+}
+}
+
+@media (width >= 600px) {
+  .form {
+  .sensia-contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .field-group input, .field-group select {
+    width: 90%;
+    margin-right: 18px;
+  }
+
+  .field-group {
+    flex: 1 1 32%;
+  }
+
+  .field-group:has(input#name), .field-group:has(input#phone) {
+    flex: 1 1 47%;
+  }
+
+  .field-group input#name, .field-group input#phone, .field-group input#email {
+    width: 90%;
+  }
+
+  .form-title {
+    font-size: 1.1rem;
+  }
+  
+  .checkbox-group, .recaptcha-container {
+    flex-direction: row;
+    gap: 0.5rem;
+    flex: 1 1 100%;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    margin-top: 0;
+  }
+}
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

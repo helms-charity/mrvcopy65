@@ -1,0 +1,51 @@
+.fragment-wrapper:has(.lojas-filter) {
+    padding: 36px 0;
+}
+
+.lojas-filter {
+    padding: 32px;;
+    border-radius: 50px;
+    max-width: 440px;
+  }
+
+  .lojas-filter h1 {
+    font-size: var(--heading-font-size-m);
+    letter-spacing: 2.56px;
+    color: var(--cor-global-verde-20);
+  }
+
+  #lojas-filter-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 36px;
+  }
+  
+  #lojas-filter-form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  #lojas-filter-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    color: #585858;
+  }
+  
+  #lojas-filter-form select:focus {
+    outline: none;
+    border-color: var(--cor-global-acento, #B7CAA6);
+    box-shadow: 0 0 0 2px #b7caa633;
+  }
+  
+  #lojas-filter-form button {
+    margin-top: 0;
+    font-size: 16px;
+    width: fit-content;
+  }

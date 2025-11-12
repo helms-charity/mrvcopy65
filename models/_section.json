@@ -1,0 +1,234 @@
+{
+  "definitions": [
+    {
+      "title": "Section",
+      "id": "section",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/section/v1/section",
+            "template": {
+              "model": "section"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "section",
+      "fields": [
+        {
+          "component": "text",
+          "name": "name",
+          "label": "Section Name",
+          "description": "O rótulo mostrado para esta seção na Árvore de Conteúdo"
+        },
+        {
+          "component": "tab",
+          "label": "Configurações de estilo",
+          "name": "tab1"
+        },
+        {
+          "component": "text",
+          "name": "id",
+          "label": "ID",
+          "description": "Adiciona um ID à seção"
+        },
+        {
+          "component": "multiselect",
+          "name": "style",
+          "label": "Estilo/Style",
+          "options": [
+            {
+              "name": "Cor de fundo/bg color",
+              "children": [
+            {
+              "name": "cor primaria/green-d",
+              "value": "cor-global-primaria"
+            },
+            {
+              "name": "cor verde 20/green-l",
+              "value": "cor-global-secundaria"
+            },
+            {
+              "name": "cor verde 30/green-ld",
+              "value": "cor-global-verde-30"
+            },
+            {
+              "name": "cor verde 80/green",
+              "value": "cor-global-verde-80"
+            },
+            {
+              "name": "cor azul 20/blue",
+              "value": "cor-global-azul-20"
+            },
+            {
+              "name": "cor azul 30/blue-d",
+              "value": "cor-global-azul-30"
+            },
+            {
+              "name": "cor branco/white",
+              "value": "cor-global-branco"
+            },
+            {
+              "name": "cor preto/black",
+              "value": "cor-global-preto"
+            }
+          ]
+        },
+        {
+          "name": "conteúdo 50% no desktop",
+          "children": [
+            {
+              "name": "direito, fundo de ângulo verde escuro (tour)",
+              "value": "angle-right"
+            },
+            {
+              "name": "esquerda, fundo de ângulo verde claro (loja)",
+              "value": "angle-left"
+            }
+            ]
+            },
+        {
+          "name": "Outra/other",
+          "children": [
+            {
+              "name": "flex",
+              "value": "flex"
+            },
+            {
+              "name": "larga/wide",
+              "value": "wide"
+            },
+            {
+              "name": "Centro/Center",
+              "value": "center"
+            }
+            ]
+            }
+          ]
+        },
+        {
+          "component": "tab",
+          "label": "Configuração de imagens de fundo",
+          "name": "tab2"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image-mobile",
+          "label": "Imagem - Mobile",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "image-mobileAlt",
+          "label": "texto alternativo para imagem/altText",
+          "value": ""
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image-tablet",
+          "label": "Imagem - Tablet",
+          "multi": false
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image-desktop",
+          "label": "Imagem - Desktop",
+          "multi": false
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "object-fit",
+          "label": "ajuste de imagem/bg fit",
+          "value": "cobrir/cover",
+          "options": [
+            {
+              "name": "cover",
+              "value": "cobrir/cover"
+            },
+            {
+              "name": "contain",
+              "value": "conter/contain"
+            },
+            {
+              "name": "none",
+              "value": "nada/none"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "object-position",
+          "label": "posição da imagem/bg position",
+          "value": "centro/center",
+          "options": [
+            {
+              "name": "center",
+              "value": "centro/center"
+            },
+            {
+              "name": "top left",
+              "value": "superior esquerda/top left"
+            },
+            {
+              "name": "top right",
+              "value": "superior direita/top right"
+            },
+            {
+              "name": "bottom left",
+              "value": "inferior esquerda/bottom left"
+            },
+            {
+              "name": "bottom right",
+              "value": "inferior direita/bottom right"
+            }
+          ]
+        },
+        {
+          "component": "boolean",
+          "label": "no mobile, exiba a imagem atrás do conteúdo em vez de em cima (always absolute)",
+          "name": "absolute-always",
+          "valueType": "boolean"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "section",
+      "components": [
+        "text",
+        "image",
+        "button",
+        "title",
+        "hero",
+        "cards",
+        "cards-filter",
+        "columns",
+        "fragment",
+        "accordion",
+        "carousel",
+        "embed",
+        "video",
+        "modal",
+        "subheader",
+        "slider",
+        "slider-lazer",
+        "table",
+        "tabs",
+        "library-metadata",
+        "lojas-filter",
+        "form"
+      ]
+    }
+  ]
+}

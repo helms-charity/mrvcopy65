@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Essa página não existe.</title>
+  <script type="text/javascript">
+    window.isErrorPage = true;
+    window.errorCode = '404';
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Page not found">
+  <script src="/scripts/scripts.js" type="module" crossorigin="use-credentials"></script>
+  <script type="module">
+    window.addEventListener('load', () => {
+      if (document.referrer) {
+        const { origin, pathname } = new URL(document.referrer);
+        if (origin === window.location.origin) {
+          const backBtn = document.createElement('a');
+          backBtn.classList.add('button', 'error-button-back');
+          backBtn.href = pathname;
+          backBtn.textContent = 'Voltar para a página anterior';
+          backBtn.title = 'Voltar';
+          const btnContainer = document.querySelector('.button-container');
+          btnContainer.append(backBtn);
+        }
+      }
+    });
+  </script>
+  <script type="module">
+    import { sampleRUM } from '/scripts/aem.js';
+    sampleRUM('404', { source: document.referrer });
+  </script>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <style>
+    html, body {
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main.error {
+      min-height: calc(100vh - var(--nav-height));
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #23403D;
+      color: #FFF;
+    }
+
+    main.error .error-number {
+      width: 100%;
+    }
+
+    main.error .error-number text {
+      font-family: monospace;
+    }
+
+    main.error .error-block {
+      -webkit-animation: fade-in-text 2s ease-in 1s forwards;
+      animation: fade-in-text 2s ease-in 1s forwards;
+      opacity: 0;
+      position: relative;
+      display: inline;
+      margin-top: 10%;
+      text-align: center;
+      z-index: 1;
+    }
+
+    #error-number {
+      font-size: 72px;
+      font-weight: 100;
+      margin-block-start: 0;
+      padding-top: 20px;
+    }
+
+    #error-text {
+      font-size: 40px;
+      font-weight: 100;
+      max-width: 80%;
+      margin: 32px auto;
+      line-height: 1.0;
+    }
+
+    header.header-wrapper {
+      background: #23403D;
+    }
+
+    .pulsate-top-right {
+      -webkit-animation: pulsate-top-right 2s cubic-bezier(.4,0,.2,1) 2s forwards;
+	    animation: pulsate-top-right 2s cubic-bezier(.4,0,.2,1) 2s forwards;
+      position: absolute;
+      top: calc(-25vh - var(--nav-height));
+      left: auto;
+      right: -45vw;
+      width: 80vw;
+      height: 45vh;
+      background: rgb(214, 242, 188);
+      -webkit-filter: blur(100px) opacity(0.5);
+      filter: blur(100px) opacity(0.7);
+      -webkit-transform: translateX(500px);
+      transform: translateX(500px);
+      border-radius: 50%;
+      overflow: hidden;
+      z-index: 0;
+}
+
+@-webkit-keyframes pulsate-top-right {
+  0% {
+    -webkit-transform: scale(1) translateX(500px);
+            transform: scale(1) translateX(500px);
+  }
+  100% {
+    -webkit-transform: scale(1.4) translateX(0px);
+            transform: scale(1.4) translateX(0px);
+  }
+}
+@keyframes pulsate-top-right {
+  0% {
+    -webkit-transform: scale(1) translateX(500px);
+            transform: scale(1) translateX(500px);
+  }
+  100% {
+    -webkit-transform: scale(1.4) translateX(0px);
+            transform: scale(1.4) translateX(0px);
+  }
+}
+
+@-webkit-keyframes fade-in-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
+
+@keyframes fade-in-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
+}
+
+@media (width >=560px)  {
+
+    main.error {
+      min-height: calc(100vh - var(--nav-height));
+      display: flex;
+      flex-direction: row;
+      justify-content: normal;
+      padding: 0 50px;
+    }
+
+    main.error .error-block {
+      align-self: flex-start;
+      margin: 15% 0 0 0;
+      text-align: left;;
+    }
+
+    #error-number {
+      font-size: 80px;
+    }
+
+    #error-text {
+      max-width: 100%;
+      margin: 0;
+    }
+    .pulsate-top-right {
+      -webkit-filter: blur(100px) opacity(1);
+      filter: blur(100px) opacity(1);
+    }
+  
+}
+
+  </style>
+  <link rel="stylesheet" href="/styles/lazy-styles.css">
+  <link rel="icon" href="/styles/favicon.png" sizes="32x32">
+  <link rel="icon" href="/styles/favicon.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/styles/favicon.png">
+</head>
+
+<body>
+  <header></header>
+  <main class="error">
+    <div class="error-block">
+      <h1 id="error-number">Erro 404</h1>
+      <h2 id="error-text">Essa página não existe.</h2>
+      <div class="section-metadata">
+        <div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div class="pulsate-top-right">
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

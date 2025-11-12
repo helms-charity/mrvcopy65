@@ -1,0 +1,123 @@
+{
+  "definitions": [
+    {
+      "title": "Tabs",
+      "id": "tabs",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Tabs",
+              "model": "tabs",
+              "filter": "tabs"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Tabs Item",
+      "id": "tabs-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Tab",
+              "model": "tabs-item",
+              "tabName": "Nome do Tab"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "tabs",
+      "fields": [
+        {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Estilos",
+          "options": [
+            {
+              "name": "Largura 25%",
+              "value": "width-25"
+            },
+            {
+              "name": "Largura 33%",
+              "value": "width-33"
+            },
+            {
+              "name": "Largura 50%",
+              "value": "width-50"
+            },
+            {
+              "name": "Largura 66%",
+              "value": "width-66"
+            },
+            {
+              "name": "Largura 75%",
+              "value": "width-75"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tabs-item",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "tabName",
+          "value": "",
+          "label": "Nome do Tab"
+        },
+        {
+          "component": "richtext",
+          "name": "content",
+          "value": "",
+          "label": "Texto",
+          "valueType": "string"
+        },
+                {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image_mobile",
+          "label": "Imagem - Mobile",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "image_mobileAlt",
+          "label": "Texto alt da imagem",
+          "value": ""
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image_tablet",
+          "label": "Imagem - Tablet",
+          "multi": false
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image_desktop",
+          "label": "Imagem - Desktop",
+          "multi": false
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "tabs",
+      "components": ["tabs-item"]
+    }
+  ]
+}

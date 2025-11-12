@@ -1,0 +1,76 @@
+{
+  "definitions": [
+    {
+      "title": "Slider-Lazer",
+      "id": "slider-lazer",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Slider-Lazer",
+              "model": "slider-lazer",
+              "filter": "slider-lazer"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Slider-Lazer Item",
+      "id": "slider-lazer-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Slider-Lazer Item",
+              "model": "slider-lazer-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "slider-lazer",
+      "fields": [
+        {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Estilos",
+          "description": "Os slides são preenchidos apenas pelas tags do tipo 'itens-de-lazer' nas propriedades da página",
+          "value": ["desktop-3", "aspect-ratio-1-1"],
+          "options": [
+            {
+              "name": "3 slides mostrados desktop",
+              "value": "desktop-3"
+            },
+            {
+              "name": "Autoslide",
+              "value": "autoslide"
+            },
+            {
+              "name": "Proporção da tela/Aspect Ratio",
+              "children": [
+                {
+                  "name": "16:9 Largo/Wide",
+                  "value": "aspect-ratio-16-9"
+                },
+                {
+                  "name": "1:1 Quadrado/Square",
+                  "value": "aspect-ratio-1-1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+    }
+  ]
+}

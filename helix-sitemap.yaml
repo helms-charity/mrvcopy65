@@ -1,0 +1,13 @@
+sitemaps:
+  default:
+    origin: https://main--meusensia--mrvengenharia.aem.live
+    source: /query-index.json
+    destination: /sitemap.xml
+    lastmod: YYYY-MM-DD
+    hreflang: pt-BR
+  imovel:
+    origin: https://main--meusensia--mrvengenharia.aem.live
+    source: /imovel/query-index.json
+    destination: /imovel/sitemap-imovel.xml
+    lastmod: YYYY-MM-DD
+    hreflang: pt-BR

@@ -1,0 +1,206 @@
+{
+  "definitions": [
+    {
+      "title": "Section ângulos verdes",
+      "id": "wedge-metadata",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/section/v1/section",
+            "template": {
+              "model": "wedge-metadata",
+              "name": "Section ângulos verdes"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "wedge-metadata",
+      "fields": [
+        {
+          "component": "text",
+          "name": "name",
+          "label": "Nome da seção/Section",
+          "value": "Section ângulo verde",
+          "description": "O rótulo mostrado para esta seção na Árvore de Conteúdo"
+        },
+        {
+          "component": "tab",
+          "label": "Configurações de estilo",
+          "name": "tab1"
+        },
+        {
+          "component": "text",
+          "name": "id",
+          "label": "ID",
+          "description": "Adiciona um ID à seção"
+        },
+        {
+          "component": "multiselect",
+          "name": "style",
+          "label": "Estilo/Style",
+          "options": [
+            {
+              "name": "Cor de fundo/bg color",
+              "children": [
+            {
+              "name": "cor verde 30/green-ld",
+              "value": "cor-global-verde-30"
+            },
+            {
+              "name": "cor verde 80/green",
+              "value": "cor-global-verde-80"
+            }
+          ]
+        },
+        {
+          "name": "conteúdo 50% no desktop",
+          "children": [
+            {
+              "name": "direito, fundo de ângulo verde escuro (tour)",
+              "value": "angle-right"
+            },
+            {
+              "name": "esquerda, fundo de ângulo verde claro (loja)",
+              "value": "angle-left"
+            },
+            {
+              "name": "direito,fundo quadrado sólido",
+              "value": "square-right"
+            },
+            {
+              "name": "esquerda, fundo quadrado sólido",
+              "value": "square-left"
+            }
+            ]
+            },
+            {
+              "name": "Outra/other",
+              "children": [
+                {
+                  "name": "Centro/Center",
+                  "value": "center"
+                }
+                ]
+                }
+          ]
+        },
+        {
+          "component": "tab",
+          "label": "Configuração de imagens de fundo",
+          "name": "tab2"
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image-mobile",
+          "label": "Imagem - Mobile",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "image-mobileAlt",
+          "label": "texto alternativo para imagem/altText",
+          "value": ""
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image-tablet",
+          "label": "Imagem - Tablet",
+          "multi": false
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image-desktop",
+          "label": "Imagem - Desktop",
+          "multi": false
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "object-fit",
+          "label": "ajuste de imagem/bg fit",
+          "value": "cobrir/cover",
+          "options": [
+            {
+              "name": "cover",
+              "value": "cobrir/cover"
+            },
+            {
+              "name": "contain",
+              "value": "conter/contain"
+            },
+            {
+              "name": "none",
+              "value": "nada/none"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "object-position",
+          "label": "posição da imagem/bg position",
+          "value": "centro/center",
+          "options": [
+            {
+              "name": "center",
+              "value": "centro/center"
+            },
+            {
+              "name": "top left",
+              "value": "superior esquerda/top left"
+            },
+            {
+              "name": "top right",
+              "value": "superior direita/top right"
+            },
+            {
+              "name": "bottom left",
+              "value": "inferior esquerda/bottom left"
+            },
+            {
+              "name": "bottom right",
+              "value": "inferior direita/bottom right"
+            }
+          ]
+        },
+        {
+          "component": "boolean",
+          "label": "no celular, exiba a imagem atrás do conteúdo em vez de em cima (always absolute)",
+          "name": "absolute-always",
+          "valueType": "boolean"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "wedge-metadata",
+      "components": [
+        "text",
+        "image",
+        "button",
+        "title",
+        "cards",
+        "columns",
+        "fragment",
+        "accordion",
+        "carousel",
+        "embed",
+        "video",
+        "modal",
+        "slider",
+        "table",
+        "tabs",
+        "library-metadata"
+      ]
+    }
+  ]
+}

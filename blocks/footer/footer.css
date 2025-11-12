@@ -1,0 +1,300 @@
+footer {
+  background-color: var(--cor-global-primaria);
+  color: var(--cor-global-branco);
+  font-size: var(--body-font-size-xs);
+}
+
+footer .footer > div {
+  margin: auto;
+  max-width: 1150px;
+  padding: 40px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+footer .footer p {
+  margin: 0;
+  font-size: 8px;
+}
+
+footer .footer p:has(a) {
+  font-size: var(--body-font-size-s);
+
+  a.button {
+    text-decoration: none;
+  }
+}
+
+footer a:any-link {
+  color: var(--cor-global-branco);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+footer a:any-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--cor-global-acento);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+footer a:any-link:not(:has(.icon)):hover::after,
+footer a:any-link:not(:has(.icon)):focus::after {
+  transform: scaleX(1);
+}
+
+footer a:hover {
+  color: var(--cor-global-acento);
+}
+
+footer .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 39px;
+  background-color: var(--cor-global-branco);
+  border-radius: 50%;
+  transition: background-color 0.3s ease, filter 0.3s ease;
+}
+
+footer a + a .icon {
+  margin-left: 15px;
+}
+
+footer .icon img {
+  width: 15px;
+  height: 15px;
+  filter: invert(0);
+  transition: filter 0.3s ease;
+}
+
+footer a:hover .icon {
+  background-color: var(--cor-global-preto);
+}
+
+footer a:hover .icon img {
+  filter: invert(1);
+}
+
+
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+footer ul li {
+  margin-bottom: 8px;
+}
+
+@media (width >= 900px) {
+  footer .footer > div {
+    padding: 40px 32px 24px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  footer .footer > div > .section {
+    flex: 1 1 0;
+    padding: 0 16px;
+  }
+
+  footer .footer > div > .section:first-child {
+    max-width: 15%;
+  }
+
+  footer .footer > div > .section:last-child {
+    max-width: 85%;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+  }
+
+  footer ul li {
+    margin: 0;
+    position: relative;
+  }
+
+  footer .default-content-wrapper ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer .default-content-wrapper ul + ul {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 0.5px solid var(--cor-global-branco);
+  }
+}
+
+@media (width <= 899px) {
+  footer .footer > div > .section {
+    text-align: center;
+  }
+
+  footer ul {
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer .icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  footer .icon img {
+    width: 12px;
+    height: 12px;
+  }
+
+  footer .footer > div > .section:last-child {
+    border-top: 0.5px solid var(--cor-global-branco);
+    padding-top: 12px;
+  }
+
+  footer .default-content-wrapper ul + ul {
+    border-top: 0.5px solid var(--cor-global-branco);
+    padding-top: 24px;
+    margin-top: 16px;
+  }
+}
+
+/* Fixed floating WhatsApp button */
+.whatsapp-fixed {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 8px;
+  background-color: var(--cor-global-acento);
+  width: 50px;
+  height: 50px;
+}
+
+.whatsapp-fixed:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgb(0 0 0 / 25%);
+  background-color: #25D366;
+}
+
+.whatsapp-fixed::after {
+  content: 'Entre em contato via WhatsApp';
+  position: fixed;
+  right: 52px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #25D366;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+  z-index: 1001;
+}
+
+.whatsapp-fixed:hover::after {
+  opacity: 1;
+}
+
+.whatsapp-fixed .icon.icon-whatsapp {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-fixed .icon.icon-whatsapp img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+}
+
+/* Simplified footer - center content and style image when simples id is present */
+#simples .default-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#simples .default-content-wrapper img {
+  height: 33px;
+  max-width: 300px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Apply flex properties to parent div when simples id is present */
+#simples {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Apply flex properties to the parent of the simples element */
+div:has(#simples) {
+  flex-direction: column;
+  align-items: center;
+}
+
+footer:has(#simples) {
+  height: 105px;
+}
+
+/* Apply text size to footer p when simples id is present */
+footer:has(#simples) .footer p {
+  font-size: 10pt;
+}
+
+footer:has(#simples) .footer > div > .section {
+  max-width: 50%;
+}
+
+footer:has(#simples) .footer > div {
+  padding: 29px 0;
+  gap: 0;
+}
+
+
+
+/* Mobile-specific footer adjustments */
+@media (width < 900px) {
+  footer:has(#simples) .footer > div {
+    padding: 23px 0;
+    gap: 0;
+  }
+}
