@@ -12,6 +12,7 @@
   ],
   "includes": [
     "/content/meusensia/",
-    "/content/dam/meusensia/"
+    "/content/dam/meusensia/icons",
+    "/content/dam/meusensia/pdf"
   ]
 }
