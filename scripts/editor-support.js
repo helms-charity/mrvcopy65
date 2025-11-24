@@ -112,7 +112,7 @@ async function applyChanges(event) {
       const blockResource = block.getAttribute('data-aue-resource');
       const newBlock = parsedUpdate.querySelector(`[data-aue-resource="${blockResource}"]`);
       if (newBlock) {
-        const state = getState(block);
+        //const state = getState(block);
         newBlock.style.display = 'none';
         block.insertAdjacentElement('afterend', newBlock);
         decorateButtons(newBlock);
@@ -121,10 +121,10 @@ async function applyChanges(event) {
         decorateRichtext(newBlock);
         await loadBlock(newBlock);
         // Update taxonomy for blocks that need it
-        await updateTaxonomyForBlock(newBlock);
-        decorateTagsLazer(newBlock);
+        //await updateTaxonomyForBlock(newBlock);
+        //decorateTagsLazer(newBlock);
         block.remove();
-        setState(newBlock, state);
+        //setState(newBlock, state);
         newBlock.style.display = null;
         return true;
       }
