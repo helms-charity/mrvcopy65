@@ -112,7 +112,7 @@ async function applyChanges(event) {
       const blockResource = block.getAttribute('data-aue-resource');
       const newBlock = parsedUpdate.querySelector(`[data-aue-resource="${blockResource}"]`);
       if (newBlock) {
-        //const state = getState(block);
+        const state = getState(block);
         newBlock.style.display = 'none';
         block.insertAdjacentElement('afterend', newBlock);
         decorateButtons(newBlock);
@@ -121,8 +121,8 @@ async function applyChanges(event) {
         decorateRichtext(newBlock);
         await loadBlock(newBlock);
         // Update taxonomy for blocks that need it
-        //await updateTaxonomyForBlock(newBlock);
-        //decorateTagsLazer(newBlock);
+        await updateTaxonomyForBlock(newBlock);
+        decorateTagsLazer(newBlock);
         block.remove();
         //setState(newBlock, state);
         newBlock.style.display = null;
@@ -183,17 +183,3 @@ document.head.insertAdjacentHTML('beforeend', `<style id="style-overrides">
   }
     </style>`);
 
-
-// decorate rich text copied from worldbank to see if breaking content tree
-
-// this has to happen after decorateMain(), and everythime decorateBlocks() is called
-
-decorateRichtext();
-
-// in cases where the block decoration is not done in one synchronous iteration we need to listen
-
-// for new richtext-instrumented elements. this happens for example when using experimentation.
-
-const observer = new MutationObserver(() => decorateRichtext());
-
-observer.observe(document, { attributeFilter: ['data-richtext-prop'], subtree: true });
