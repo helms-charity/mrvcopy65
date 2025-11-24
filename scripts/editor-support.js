@@ -182,3 +182,18 @@ document.head.insertAdjacentHTML('beforeend', `<style id="style-overrides">
     max-height: 1200px !important;
   }
     </style>`);
+
+
+// decorate rich text copied from worldbank to see if breaking content tree
+
+// this has to happen after decorateMain(), and everythime decorateBlocks() is called
+
+decorateRichtext();
+
+// in cases where the block decoration is not done in one synchronous iteration we need to listen
+
+// for new richtext-instrumented elements. this happens for example when using experimentation.
+
+const observer = new MutationObserver(() => decorateRichtext());
+
+observer.observe(document, { attributeFilter: ['data-richtext-prop'], subtree: true });
